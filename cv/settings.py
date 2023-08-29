@@ -77,12 +77,19 @@ WSGI_APPLICATION = 'cv.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': "mydb",
+        'ENFORCE_SCHEMA':'True',
+        'CLIENT':{
+            'host':'mongodb+srv://asthasachan96:astha12345@cluster0.sqbgpb0.mongodb.net/?retryWrites=true&w=majority',
+            'username':'asthasachan96',
+            'password':'astha12345',
+            'authMechanism':'SCRAM-SHA-1',
+        }
+    }
+}
 
 
 # Password validation
